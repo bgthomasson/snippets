@@ -1,0 +1,24 @@
+/* Here's some sample CSS to break things with */
+    body {
+        background-color: #111;
+        color: #fff;
+        font-family: "Source Code Pro", "DejaVu Sans Mono", Consolas, monospace;
+        font-size: 1.2em;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    a {
+        color: #eee;
+        text-decoration: none;
+        display: list-item;
+        list-style-type: none;
+    }
+    a:hover {
+        color: #0f0;
+    }
+    p {
+        border: 1px solid #2f4f4f;
+        border-radius: 15px;
+        padding: 1em;
+        line-height: 200%;
+    }
