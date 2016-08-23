@@ -1,7 +1,7 @@
 # TEMPERATURE CONVERTER
 # 2014.01.08, 2016.08.04
 # To do: 
-# Continue/quit option.
+# Continue/quit option should be NUMBER to continue or anything else to quit
 # Defaults to F as input, should it be a choice between F, C, K?
 # Bonus: commentary, e.g. "Hot enough to melt lead!" "What a lovely day!"
 
