@@ -31,7 +31,7 @@ def finder():
                 # create a valid path on any OS-
                 url = os.path.join(folder, filename)
 
-                # now grab file info- statinfo requires full valid path- 
+                # now grab file info- statinfo requires valid path- 
                 statinfo = os.stat(url)
 
                 # fuzzy file sizes- 
@@ -44,10 +44,10 @@ def finder():
                     humansize = str(bytesize // 1000000) + ' MB'
 
                 # time last modified- pay attention to nesting order- 
-                last_edit = strftime("%Y %B %d", localtime(statinfo.st_mtime))
+                edited = strftime("%Y %B %d", localtime(statinfo.st_mtime))
 
                 # output-
-                print(url + ' ~' + humansize + ' * ' + last_edit)
+                print(url + ' ~' + humansize + ' * ' + edited)
             
 
 finder()
