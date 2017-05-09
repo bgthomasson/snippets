@@ -1,14 +1,11 @@
-# iterate integers from 1 to 100:
-# multiples of 3 print "fizz", of 5 print "buzz", of 15 "fizzbuzz"
+#! python3
 
 def start():
-    print('Enter an integer for the starting value:')
-    start_val = int(input())
+    start_val = int(input('Enter an integer for the starting value: '))
     return start_val
 
 def end():
-    print('Enter an integer for the ending value: ')
-    end_val = int(input()) + 1
+    end_val = int(input('Enter an integer for the ending value: ')) + 1
     return end_val
 
 def fizzbuzz(starter, ender):
@@ -22,14 +19,6 @@ def fizzbuzz(starter, ender):
         else:
             print(x)
 
-
-# Your first instinct is probably to follow instructions directly-
-# 3, 5, both. However this can cause a bug where it outputs the results
-# for 3 or 5 and not the "both" condition. At least in certain languages
-# tested...
-
-# Note that range() is 'exclusive' and does NOT include the max value:
-# if z = 12, then 11 is the last number printed out!
 
 def main():
     rerun = "y"
@@ -49,4 +38,3 @@ def main():
             rerun == "y"
 
 main()
-            
