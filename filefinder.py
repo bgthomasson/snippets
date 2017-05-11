@@ -1,20 +1,21 @@
 #! python3
 
 '''
-DONE:
-. dir to search is automatically found- user's home dir on WIN or UNIX
-. valid file path on WIN or UNIX
-. succesfully searches for RTF and retrieves basic metadata
-. returns file size (fuzzy)
-. returns date modified (but not time because of space)
+GOALS:
+I'm trying to standardize my workflow: all writing should be in ODT (or DOCX),
+so any RTF or DOC files should be saved as such, and the original trashed.
+You can do this in BASH or GUI but I thought this was good practice. 
 
 #TODO: allow choice of dir to search 
 #TODO: choose filetype to find (dropmenu?)
-#TODO: choose program to open files with (button? menu?)  
+#bonus: check if RTF files have eponymous ODT/DOC/etc versions
+#bonus: for TXT files, check if UTF-8 (st_mode?)
+#TODO: choose program to open files with. import subprocess
+?: subprocess.run(['usr/bin/libreoffice', url])
+?: or libreoffice --writer %U 
 #TODO: preview contents
-#TODO: better to split output up so can put into tabular form-
-
-FILE | SIZE | EDITED | OPEN | Preview 
+#TODO: FILE | SIZE | EDITED
+#: Preview | OPEN | DELETE os.remove(url)
 
 '''
 
@@ -51,3 +52,15 @@ def finder():
             
 
 finder()
+
+
+'''
+try:
+    fp = open("myfile")
+except PermissionError:
+    return "I kinna do that cap'n!"
+else:
+    with fp:
+        return fp.read()
+'''
+
